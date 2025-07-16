@@ -1,0 +1,32 @@
+{
+    "datasets": [
+        {
+            "name": "table_name",
+            "database": {
+                "host": "localhost",
+                "port": "5432",
+                "database": "database_name",
+                "user": "user_name",
+                "password": "password"
+            },
+            "table_name": "table_name",
+            "output_folder": "output",
+            "key_fields": ["key_field_1", "key_field_2", "key_field_3"],
+            "value_fields": ["value_field_1", "value_field_2", "value_field_3", "value_field_4", "value_field_5", "value_field_6"],
+            "datetime_field": "datetime_field",
+            "target_date": "0000-00-00",
+            "timestamp_format": "%Y-%m-%d",
+            "methods": ["method_1", "method_2", "method_3", "method_4", "method_5", "method_6", "method_7"],
+            "thresholds": {
+             "default": {
+             "zscore": 3,
+             "modified_zscore": 3.5,
+            "iqr_multiplier": 1.5,
+            "lof_neighbors": 10,
+            "rolling_window": 3
+            }
+        },
+      "min_methods_flag": 3
+        }
+    ]
+}
